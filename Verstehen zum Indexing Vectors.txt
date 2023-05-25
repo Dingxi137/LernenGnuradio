@@ -1,0 +1,33 @@
+The input input_items and output output_items include an extra dimension when using vectors.
+Vectors add an additional dimension, represented as vectorIndex below. The input_items and output_items are now three-dimensional arrays:
+input_items[portIndex][vectorIndex][sampleIndex]
+output_items[portIndex][vectorIndex][sampleIndex]
+D.h., dass wir hier eine 3-dim. Matrizen erzeugt haben, also: input_items und output_items. 
+Mit den 3 Indizes in unterschiedlichen Dimension-Indizes in der Matrix kann man die Elementen in der Matrix auswählen.
+
+
+
+Indexing based on the portIndex returns a two-dimensional array of all vectors and samples, for example:
+input_items[portIndex]
+output_items[portIndex]
+D.h., dass wir den portIndex bestimmet haben. Das bedeutet, dass die 3-dim. Matrix eine Dimension reduziert wird, 
+damit wir nur eine 2-dim. Matrix mit dem gegebenen portIndex betrachten. 
+Wenn wir noch einen vectorIndex bestimmt haben. Das bedeutet, dass die 2-dim. Matrix mit dem gegebenen vectorIndex wieder eine Dimension reduziert wird, 
+damit wir eine 1-dim. Matrix betrachten, also, 1-dim. Matrix bedeutet einen Vektor, bzw. eine Sequenz.
+
+ 
+
+
+Indexing based on portIndex and vectorIndex returns an single-dimensional array of samples, for example:
+input_items[portIndex][vectorIndex]
+input_items[portIndex][vectorIndex]
+Indexing based on portIndex, vectorIndex and sampleIndex returns a single sample.
+D.h. wie ich gerade mit 1-dim. Matrix erklärt habe, damit 1-dim. Matrix bzw. eine Sequenz als Return gezeigt wird.
+
+
+input_items[portIndex][vectorIndex][sampleIndex]
+input_items[portIndex][vectorIndex][sampleIndex]
+D.h., dass mit festen 3 Index-Eingaben von 3-dim. Matrix ein festes Element in der Matrix bestimmt wird.
+Das bedeutet, dass ein Element aus 3-dim. Matrix als Return gezeigt wird.
+
+In dieser Linke https://wiki.gnuradio.org/index.php?title=Python_Block_with_Vectors kann man ein visuales Beispiel merken.
