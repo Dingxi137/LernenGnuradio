@@ -1,0 +1,2 @@
+# LernenGnuradio
+CommentarForDiffenrenteCode
